@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistar | Premium Global Produce Exports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Crimson Pro', serif; }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover; background-position: center;
+        }
+        .product-card:hover img { transform: scale(1.1); }
+        .accent-green { color: #10b981; }
+        .bg-vistar-dark { background-color: #1a1c1e; }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <nav class="bg-white py-4 px-8 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white">
+                <i data-lucide="leaf"></i>
+            </div>
+            <span class="text-2xl font-bold tracking-tight text-slate-900">VISTAR</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider text-slate-600">
+            <a href="#" class="hover:text-emerald-600">Home</a>
+            <a href="#" class="hover:text-emerald-600">About</a>
+            <a href="#" class="hover:text-emerald-600">Products</a>
+            <a href="#" class="hover:text-emerald-600">Contact</a>
+        </div>
+        <button class="bg-emerald-600 text-white px-6 py-2 rounded-md font-bold text-sm hover:bg-emerald-700 transition uppercase">Inquiry</button>
+    </nav>
+
+    <header class="hero-bg h-[70vh] flex flex-col items-center justify-center text-center text-white px-6">
+        <p class="uppercase tracking-[0.3em] text-sm mb-4 font-semibold">Quality First</p>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Vistar Global Exports</h1>
+        <div class="w-24 h-1 bg-emerald-500 rounded-full"></div>
+    </header>
+
+    <section class="grid grid-cols-2 md:grid-cols-4">
+        <div class="relative h-64 overflow-hidden group product-card">
+            <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-emerald-900/60 transition">
+                <h3 class="text-white text-2xl font-bold">Oranges</h3>
+            </div>
+        </div>
+        <div class="relative h-64 overflow-hidden group product-card">
+            <img src="https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-emerald-900/60 transition">
+                <h3 class="text-white text-2xl font-bold">Tomatoes</h3>
+            </div>
+        </div>
+        <div class="relative h-64 overflow-hidden group product-card">
+            <img src="https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-emerald-900/60 transition">
+                <h3 class="text-white text-2xl font-bold">Greens</h3>
+            </div>
+        </div>
+        <div class="relative h-64 overflow-hidden group product-card">
+            <img src="https://images.unsplash.com/photo-1550258114-b834e70e9be1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition duration-700">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-emerald-900/60 transition">
+                <h3 class="text-white text-2xl font-bold">Pineapple</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6 text-slate-900">Leading the Way in Sustainable Agriculture</h2>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Vistar is a premier export house specializing in high-quality fresh produce. We source directly from local farms, ensuring that every piece of fruit and vegetable meets international safety standards.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Our story is one of growth, integrity, and a deep respect for the earth. By bridging the gap between local farmers and global markets, we ensure freshness and fair trade.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border-t-4 border-emerald-500">
+                    <i data-lucide="shield-check" class="mx-auto mb-4 text-emerald-600"></i>
+                    <h4 class="font-bold">Quality Assured</h4>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border-t-4 border-emerald-500">
+                    <i data-lucide="truck" class="mx-auto mb-4 text-emerald-600"></i>
+                    <h4 class="font-bold">Global Reach</h4>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border-t-4 border-emerald-500">
+                    <i data-lucide="users" class="mx-auto mb-4 text-emerald-600"></i>
+                    <h4 class="font-bold">Expert Team</h4>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center border-t-4 border-emerald-500">
+                    <i data-lucide="globe" class="mx-auto mb-4 text-emerald-600"></i>
+                    <h4 class="font-bold">Eco Friendly</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-0 shadow-2xl rounded-3xl overflow-hidden border">
+            <div class="bg-slate-200 min-h-[400px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7932223838423!2d72.89972741532414!3d19.072846887087677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzIyLjMiTiA3MsKwNTQnMDYuOSJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="bg-vistar-dark p-12 text-white">
+                <h2 class="text-3xl font-bold mb-8 uppercase tracking-widest">Get In Touch</h2>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full bg-white/10 border border-white/20 p-4 rounded focus:outline-none focus:border-emerald-500">
+                    <input type="email" placeholder="Email" class="w-full bg-white/10 border border-white/20 p-4 rounded focus:outline-none focus:border-emerald-500">
+                    <textarea placeholder="Message" rows="4" class="w-full bg-white/10 border border-white/20 p-4 rounded focus:outline-none focus:border-emerald-500"></textarea>
+                    <button class="bg-emerald-600 w-full py-4 rounded font-bold hover:bg-emerald-500 transition">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <span class="text-2xl font-bold">VISTAR</span>
+                <p class="text-slate-400 text-sm mt-2">© 2026 Vistar Foreign Exim. All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6 mt-6 md:mt-0">
+                <i data-lucide="facebook" class="w-5 h-5 cursor-pointer hover:text-emerald-500"></i>
+                <i data-lucide="instagram" class="w-5 h-5 cursor-pointer hover:text-emerald-500"></i>
+                <i data-lucide="twitter" class="w-5 h-5 cursor-pointer hover:text-emerald-500"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
