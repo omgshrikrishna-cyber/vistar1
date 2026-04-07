@@ -11,13 +11,13 @@
 
     <style>
         :root {
-            --bg-color: #ffffff; /* Pure, clean white */
-            --text-main: #1a1a1d; /* Very deep charcoal, not pure black */
-            --text-muted: #6c757d; /* Soft grey for secondary text */
-            --accent-blue: #007bff; /* Electric blue for a tech connection */
-            --accent-hover: #0056b3; /* Deeper blue for hover state */
-            --card-bg: #f8f9fa; /* Very light subtle grey for the container */
-            --transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smoother transition */
+            --bg-color: #ffffff; /* Clean white */
+            --text-main: #1a1a1d; /* Deep charcoal */
+            --text-muted: #6c757d; /* Soft grey */
+            --accent-blue: #007bff; /* Tech electric blue */
+            --accent-hover: #0056b3;
+            --card-bg: #fdfdfd; /* Faintest grey for contrast */
+            --transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         * {
@@ -30,39 +30,82 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             line-height: 1.6;
-            overflow: hidden; /* Keeps the focus on the card */
+            overflow: hidden; /* Keeps the focus strictly on the card */
+            position: relative;
         }
 
-        /* Subtle animated background light pulse */
+        /* Abstract Neural Background Graphic */
         body::before {
             content: '';
             position: absolute;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(circle at center, rgba(0, 123, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
-            animation: pulse 15s infinite alternate;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 123, 255, 0.05) 0%, rgba(255, 255, 255, 0) 50%),
+                radial-gradient(circle at 85% 50%, rgba(0, 123, 255, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
             z-index: -1;
-        }
-
-        @keyframes pulse {
-            0% { transform: translate(-10%, -10%); }
-            100% { transform: translate(10%, 10%); }
         }
 
         .container {
             text-align: center;
             max-width: 650px;
-            padding: 50px 40px;
+            width: 90%;
+            padding: 60px 40px;
             background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.03); /* Subtle, sophisticated shadow */
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.03); /* Soft, premium shadow */
             border: 1px solid rgba(0, 0, 0, 0.05); /* Very faint border */
-            backdrop-filter: blur(10px); /* Modern blur effect */
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+
+        /* Active Neural/Innovation Graphic */
+        .neural-graphic {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .graphic-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(0, 123, 255, 0.1);
+            border-radius: 50%;
+            animation: ripple 6s infinite linear;
+        }
+
+        .graphic-circle:nth-child(2) { animation-delay: 2s; }
+        .graphic-circle:nth-child(3) { animation-delay: 4s; }
+
+        .graphic-core {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-blue);
+            border-radius: 50%;
+            top: 30px;
+            left: 30px;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+            animation: core-pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(0.6); opacity: 1; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        @keyframes core-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.1); opacity: 1; }
         }
 
         .status-badge {
@@ -84,9 +127,7 @@
             font-weight: 700;
             letter-spacing: -1.5px;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #1a1a1d 0%, #6c757d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-main);
         }
 
         .extension {
@@ -97,14 +138,8 @@
         .tagline {
             font-size: 19px;
             color: var(--text-muted);
-            margin-bottom: 45px;
+            margin-bottom: 50px;
             font-weight: 300;
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.08), rgba(0,0,0,0));
-            margin: 35px 0;
         }
 
         .offer-section h3 {
@@ -121,70 +156,61 @@
 
         .btn-contact {
             display: inline-block;
-            padding: 16px 45px;
+            padding: 18px 50px;
             background-color: var(--accent-blue);
             color: #fff;
             text-decoration: none;
-            border-radius: 8px; /* Slightly softer corners */
+            border-radius: 12px; /* Softer, modern corners */
             font-weight: 600;
             font-size: 17px;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
         }
 
         .btn-contact:hover {
             background-color: var(--accent-hover);
-            transform: translateY(-2px); /* Lift on hover */
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
+            transform: translateY(-3px); /* Stronger lift on hover */
+            box-shadow: 0 15px 35px rgba(0, 123, 255, 0.4);
         }
 
         .secure-transfer {
-            margin-top: 55px;
+            margin-top: 60px;
             font-size: 13px;
             color: #888;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 12px;
-        }
-
-        /* Simple placeholder for a 'secure' icon */
-        .icon-shield {
-            width: 16px;
-            height: 16px;
-            border: 2px solid #888;
-            border-radius: 50%;
-            position: relative;
-        }
-        .icon-shield::after {
-            content: '';
-            position: absolute;
-            width: 7px;
-            height: 7px;
-            background: #888;
-            border-radius: 50%;
-            top: 2.5px;
-            left: 2.5px;
+            border-top: 1px solid rgba(0, 0, 0, 0.03); /* Subtle top border */
+            padding-top: 30px;
         }
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
             .domain-name { font-size: 40px; letter-spacing: -1px; }
-            .container { padding: 40px 30px; margin: 20px; }
+            .container { padding: 50px 30px; margin: 20px; }
             .tagline { font-size: 17px; }
+            .neural-graphic { width: 80px; height: 80px; }
+            .graphic-core { width: 30px; height: 30px; top: 25px; left: 25px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        
+        <div class="neural-graphic">
+            <div class="graphic-circle"></div>
+            <div class="graphic-circle"></div>
+            <div class="graphic-circle"></div>
+            <div class="graphic-core"></div>
+        </div>
+
         <div class="status-badge">Premium Digital Asset</div>
         
         <h1 class="domain-name">neurolabs<span class="extension">.pro</span></h1>
         
-        <p class="tagline">The definitive domain for global ventures in AI, Robotics, Biotech, and Neural technology.</p>
-
-        <div class="divider"></div>
+        <p class="tagline">The definitive domain for ventures in AI, Neural Technology, Biotech, and Robotics.</p>
 
         <div class="offer-section">
             <h3>Acquisition Inquiry</h3>
@@ -194,7 +220,9 @@
         </div>
 
         <div class="secure-transfer">
-            <div class="icon-shield"></div>
+            <svg class="icon-shield" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
             <span>Secure & authenticated domain transfer guaranteed</span>
         </div>
     </div>
